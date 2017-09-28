@@ -13,26 +13,26 @@ class SignupForm extends React.Component {
       <Col size={70}>
         <Row size={10} />
         <Col size={55} style={styles.controlContainer}>
-          <Row>
+          <Row size={35}>
             <TextInput
               icon='person'
               placeholder='Họ Tên'
               containerStyle={styles.inputContainer} />
           </Row>
-          <Row>
+          <Row size={35}>
             <TextInput
               icon='mail'
               placeholder='Email'
               containerStyle={styles.inputContainer} />
           </Row>
-          <Row>
+          <Row size={35}>
             <TextInput
               icon='lock'
               placeholder='Mật Khẩu'
               secureTextEntry
               containerStyle={styles.inputContainer} />
           </Row>
-          <Row>
+          <Row size={30}>
             <Button iconLeft rounded success style={styles.signupButton} onPress={onSignup}>
               <Text>ĐĂNG KÝ</Text>
             </Button>
@@ -41,7 +41,7 @@ class SignupForm extends React.Component {
         <Row size={10} />
         <Col size={20} style={styles.controlContainer}>
           <Row size={20}>
-            <Text>Bạn đã có tài khoản?</Text>
+            <Text>Đã có tài khoản?</Text>
           </Row>
           <Row size={80}>
             <Button transparent success onPress={onSwitchForm}>

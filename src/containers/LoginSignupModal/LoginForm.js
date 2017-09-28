@@ -40,7 +40,7 @@ class LoginForm extends React.Component {
         <Row size={10} />
         <Col size={15} style={styles.controlContainer}>
           <Row size={20}>
-            <Text>Bạn chưa có tài khoản?</Text>
+            <Text>Chưa có tài khoản?</Text>
           </Row>
           <Row size={80}>
             <Button transparent success onPress={onSwitchForm}>
