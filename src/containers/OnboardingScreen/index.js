@@ -6,7 +6,7 @@ import Swiper from 'react-native-swiper'
 
 import styles from './styles'
 
-import LoginModal from '../LoginModal';
+import LoginSignupModal from '../LoginSignupModal';
 
 const SLIDE_DATA = [{
   image: require('../../assets/images/onboarding_1.png'),
@@ -26,6 +26,7 @@ const SLIDE_DATA = [{
   description: 'Đăng tin nhanh chóng và dễ dàng chỉ với vài bước. Mọi tin đăng đều được kiểm duyệt.'
 }]
 
+// TODO: Change design later
 class OnboardingScreen extends React.PureComponent {
   _renderSlide () {
     return SLIDE_DATA.map(slide => (
@@ -65,7 +66,7 @@ class OnboardingScreen extends React.PureComponent {
           </Row>
           <Row size={20} />
         </Col>
-        <LoginModal modalRef={(key) => { this.loginModal = key }} />
+        <LoginSignupModal modalRef={(key) => { this.loginModal = key }} />
       </Grid>
     )
   }

@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native'
-import CommonStyle from '../../styles/common'
+import CommonStyle from '../../../styles/common'
 
 export default StyleSheet.create({
   modal: {
@@ -7,6 +7,9 @@ export default StyleSheet.create({
   closeButton: {
     alignSelf: 'flex-start',
     marginTop: 20
+  },
+  closeButtonIcon: {
+    fontSize: 30
   },
   logoContainer: {
     justifyContent: 'center',
