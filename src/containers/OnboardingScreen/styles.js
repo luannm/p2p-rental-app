@@ -44,6 +44,6 @@ export default StyleSheet.create({
   button: {
     width: '90%',
     height: '90%',
-    justifyContent: 'center'
+    justifyContent: 'flex-start'
   }
 })

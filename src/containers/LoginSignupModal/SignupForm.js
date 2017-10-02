@@ -10,7 +10,7 @@ class SignupForm extends React.Component {
   render () {
     const {onSignup, onSwitchForm} = this.props
     return (
-      <Col size={70}>
+      <Col size={75}>
         <Row size={10} />
         <Col size={55} style={styles.controlContainer}>
           <Row size={35}>

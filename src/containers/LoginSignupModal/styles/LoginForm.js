@@ -10,7 +10,7 @@ export default StyleSheet.create({
     height: '90%'
   },
   loginButton: {
-    width: '90%',
+    width: '95%',
     height: '90%',
     justifyContent: 'center'
   }

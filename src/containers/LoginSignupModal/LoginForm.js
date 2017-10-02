@@ -10,7 +10,7 @@ class LoginForm extends React.Component {
   render () {
     const {onLogin, onSwitchForm} = this.props
     return (
-      <Col size={70}>
+      <Col size={75}>
         <Row size={15} />
         <Col size={30} style={styles.controlContainer}>
           <Row size={35}>
@@ -26,16 +26,23 @@ class LoginForm extends React.Component {
               secureTextEntry
               containerStyle={styles.inputContainer} />
           </Row>
-          <Row size={30}>
-            <Button
-              iconLeft
-              rounded
-              success
-              style={styles.loginButton}
-              onPress={onLogin}>
-              <Text>ĐĂNG NHẬP</Text>
-            </Button>
-          </Row>
+          <Col size={30}>
+            <Row size={95} style={styles.controlContainer}>
+              <Button
+                iconLeft
+                rounded
+                success
+                style={styles.loginButton}
+                onPress={onLogin}>
+                <Text>ĐĂNG NHẬP</Text>
+              </Button>
+            </Row>
+            <Row size={5} style={styles.controlContainer}>
+              <Button success transparent>
+                <Text>Quên Mật Khẩu?</Text>
+              </Button>
+            </Row>
+          </Col>
         </Col>
         <Row size={10} />
         <Col size={15} style={styles.controlContainer}>
