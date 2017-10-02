@@ -1,8 +1,11 @@
 import React from 'react'
+import {StatusBar} from 'react-native'
 import {Font, AppLoading} from 'expo'
-import {Container, StyleProvider} from 'native-base'
+import {Root, StyleProvider} from 'native-base'
+import {StackNavigator} from 'react-navigation'
 import getTheme from './native-base-theme/components'
 import material from './native-base-theme/variables/material'
+
 import OnboardingScreen from './src/containers/OnboardingScreen'
 
 class App extends React.Component {
@@ -23,6 +26,13 @@ class App extends React.Component {
   }
 
   render () {
+    const AppNavigator = StackNavigator({
+      Onboarding: { screen: OnboardingScreen }
+    }, {
+      initialRouteName: 'Onboarding',
+      headerMode: 'none'
+    })
+
     if (!this.state.isReady) {
       return (
         <AppLoading
@@ -32,11 +42,13 @@ class App extends React.Component {
         />
       )
     }
+
     return (
       <StyleProvider style={getTheme(material)}>
-        <Container>
-          <OnboardingScreen />
-        </Container>
+        <Root>
+          <StatusBar backgroundColor='black' />
+          <AppNavigator />
+        </Root>
       </StyleProvider>
     )
   }

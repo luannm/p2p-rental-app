@@ -6,7 +6,7 @@ import Swiper from 'react-native-swiper'
 
 import styles from './styles'
 
-import LoginSignupModal from '../LoginSignupModal';
+import LoginSignupModal from '../LoginSignupModal'
 
 const SLIDE_DATA = [{
   image: require('../../assets/images/onboarding_1.png'),
@@ -40,7 +40,9 @@ class OnboardingScreen extends React.PureComponent {
 
   render () {
     return (
-      <Grid >
+      <Grid style={{
+        backgroundColor: 'white'
+      }}>
         <Row size={75}>
           <Swiper loop
             dotStyle={styles.swiperDot}
@@ -66,7 +68,7 @@ class OnboardingScreen extends React.PureComponent {
           </Row>
           <Row size={20} />
         </Col>
-        <LoginSignupModal modalRef={(key) => { this.loginModal = key }} />
+        <LoginSignupModal {...this.props} modalRef={(key) => { this.loginModal = key }} />
       </Grid>
     )
   }

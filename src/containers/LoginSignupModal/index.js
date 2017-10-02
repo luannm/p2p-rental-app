@@ -35,7 +35,10 @@ class LoginSignupModal extends React.Component {
   }
 
   _handleCloseDialog () {
-    this.setState({isOpen: false})
+    this.setState({
+      isOpen: false,
+      isLogin: true
+    })
   }
 
   render () {
@@ -61,7 +64,7 @@ class LoginSignupModal extends React.Component {
               <Icon name='close' style={styles.closeButtonIcon} />
             </Button>
           </Row>
-          <Row size={10} />
+          <Row size={5} />
           <Row size={10} style={styles.logoContainer}>
             <Image
               resizeMode='cover'
@@ -70,8 +73,8 @@ class LoginSignupModal extends React.Component {
           </Row>
           {
             isLogin
-            ? <LoginForm onSwitchForm={() => this.setState({ isLogin: false })} />
-            : <SignupForm onSwitchForm={() => this.setState({ isLogin: true })} />
+              ? <LoginForm onSwitchForm={() => this.setState({isLogin: false})} />
+              : <SignupForm onSwitchForm={() => this.setState({isLogin: true})} />
           }
         </Grid>
       </Modal>
